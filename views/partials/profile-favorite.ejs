@@ -1,0 +1,38 @@
+<div class='post-container'>
+        <div class='post'>
+            <div class='post-left'>
+                <div class='image-container'>
+                    <img class='post-image' src="/image/<%=p.image.data%>" id='recipe-pic'/>
+                </div>
+            </div>
+            <div class='post-right'>
+                <h2 class='hide-single' onclick='hide(<%=i%>)'>X</h2>
+                <h3 class=post-name><%= p.name %></h3>
+                <div class='post-buttons'>
+                    <!-- <div class='post-button-entry'>
+                            <button class='post-btn btn btn-light' type='submit'>&#9825;</button>
+                    </div>
+                    <div class='post-button-entry'>
+                            <button class='post-btn btn btn-light' type='submit'>Share</button>
+                    </div> -->
+                    <div class='post-button-entry'>
+                        <input type='hidden' class='id-hidden' value='<%=p._id%>'/>
+                        <form action='/<%= p._id %>/save' class='favorite-form' method="POST">
+                            <button class='favorite-btn post-btn btn btn-light' type='submit'>Favorite</button>
+                        </form>
+                        <form action='/<%= p._id %>/delete' class='unfavorite-form' method="POST">
+                            <button class='unfavorite-btn post-btn btn btn-light' type='submit'>Unfavorite</button>
+                        </form>
+                    </div>
+            </div>
+            <hr>
+            <ul class='recipe-steps' id='scrollbar'>
+                <% let s = 1; %>
+                <% p.recipe.forEach((step) => { %>
+                    <h4><%=s++%></h4>
+                    <li style='margin-bottom: 30px;'><%=step%></li>
+                <% }); %>
+            </ul>
+          </div>
+    </div>
+  </div>
