@@ -13,6 +13,8 @@ any dish that they like.
 
 * [Node.js](https://nodejs.org/en/) 
 * [MongoDB](https://www.mongodb.com/) 
+* [Express](https://expressjs.com/)
+* [EJS](https://ejs.co/)
 
 ## Authors
 
